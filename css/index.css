@@ -44,12 +44,18 @@ body {
 
 #Experience ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 #Experience li {
-  list-style: block;
-  margin: 5px 0 0 20px;
+  background-color: #12244e4d;
+  border-radius: 10px;
+  height: 200px;
+  list-style: none;
+  padding-top: 90px;
+  text-align: center;
+  width: 150px;
 }
 
 header {
@@ -58,7 +64,7 @@ header {
 }
 
 header nav {
-  flex-direction: flex-end;
+  justify-content: flex-end;
   margin: 50px 0 0 45%;
 }
 
