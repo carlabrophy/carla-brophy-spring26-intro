@@ -58,6 +58,22 @@ body {
   width: 150px;
 }
 
+#Skills ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#Skills li {
+  background-color: #73c4c74d;
+  border-radius: 10px;
+  height: 100px;
+  list-style: none;
+  padding-top: 40px;
+  text-align: center;
+  width: 150px;
+}
+
 header {
   display: flex;
   margin: 20px;
