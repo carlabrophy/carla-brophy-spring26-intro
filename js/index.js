@@ -1,24 +1,21 @@
-const newFooter = document.createElement("footer");
+//Create a new footer
+const footer = document.createElement("footer");
+//anserting the footer before the script tag
+document.body.insertBefore(footer, document.body.lastElementChild);
+
+//Append the copyright text directly to your variable
 const today = new Date();
 const thisYear = today.getFullYear();
 const copyright = document.createElement("p");
-const skillsSection = document.getElementById("Skills");
+copyright.innerHTML = `\u00A9 Carla Brophy ${thisYear}`;
+footer.appendChild(copyright);
+
+//Adding skills to skill section
+const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
-
-//I dont' know I still have to:
-// Create a variable named footer and assign it the footer element by using "DOM Selection" to select the <footer> element from the DOM
-//hint: querySelector method or similar and I am getting an error If i use thos to appendChild.
-const footer = document.querySelector("footer");
-
 const skills = ["JavaScript", "HTML", "CSS", "PHP", "GitHub"];
 
-// newFooter.textContent = "test";
-
-//inserting the footer before the script tag
-document.body.insertBefore(newFooter, document.body.lastElementChild);
-copyright.innerHTML = `\u00A9 Carla Brophy ${thisYear}`;
-newFooter.appendChild(copyright);
-
+//looping the skills and adding them to ul as list
 for (let x of skills) {
   const skill = document.createElement("li");
   skill.textContent = x;
