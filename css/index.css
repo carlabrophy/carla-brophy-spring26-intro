@@ -9,6 +9,7 @@ body {
   color: #1b2b51;
   font-family: "Roboto", sans-serif;
   /* font-weight: 300; */
+  margin: 20px 100px 0 100px;
 }
 
 #profile-photo {
@@ -17,71 +18,108 @@ body {
   width: 100px;
 }
 
-#Connect {
+#connect {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-#Connect ul {
+#connect ul {
   display: flex;
 }
 
-#Connect li {
+#connect li {
   margin: 5px 15px;
 }
 
-#Connect a {
+#connect a {
   border: none;
   font-size: 20px;
 }
 
-#Connect li:hover {
+#connect li:hover {
   border-bottom: 1px solid #1b2b51;
   transform: translateY(-5px);
 }
 
-#Experience ul {
+#experience ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5 0 0 0;
+}
+
+#exp-list > li {
+  background-color: #12244e4d;
+  border-radius: 10px;
+  height: 220px;
+  list-style: none;
+  padding-top: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+#exp-list li > ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 0 15px;
+  text-align: left;
+}
+
+#exp-list > li > ul > li:first-child {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.exp-detail > li {
+  font-size: 12px;
+}
+
+#skills ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-#Experience li {
-  background-color: #12244e4d;
+#skills li {
+  background-color: #73c4c74d;
   border-radius: 10px;
-  height: 200px;
+  height: 100px;
   list-style: none;
-  padding-top: 90px;
+  padding-top: 40px;
   text-align: center;
   width: 150px;
 }
 
 header {
   display: flex;
+  justify-content: space-evenly;
   margin: 20px;
 }
 
 header nav {
-  justify-content: flex-end;
-  margin: 50px 0 0 45%;
+  justify-self: flex-end;
+  margin-top: 50px;
+  width: 50%;
 }
 
 header ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 header li:hover {
-  font-style: italic;
   transform: translateY(-5px);
+  transition: all 100ms;
 }
 
 h1 {
   font-size: 30px;
   font-weight: 600;
   margin: 50px 0 0 10px;
+  width: 30%;
 }
 
 h1:hover {
@@ -93,6 +131,7 @@ h2 {
   color: #22223b;
   font-size: 22px;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 
 hr {
@@ -113,5 +152,9 @@ a {
 }
 
 section {
-  margin: 50px 20px;
+  margin: 70px 20px;
+}
+
+footer {
+  text-align: end;
 }
