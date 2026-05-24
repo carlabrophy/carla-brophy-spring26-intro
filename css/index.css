@@ -18,6 +18,10 @@ body {
   width: 100px;
 }
 
+#nav a {
+  font-size: 14px;
+}
+
 #connect {
   display: flex;
   justify-content: center;
@@ -101,7 +105,7 @@ header {
 header nav {
   justify-self: flex-end;
   margin-top: 50px;
-  width: 50%;
+  width: 55%;
 }
 
 header ul {
@@ -155,6 +159,40 @@ section {
   margin: 70px 20px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+}
+
+button {
+  align-self: center;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 40%;
+}
+
 footer {
   text-align: end;
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 18px;
+  }
 }

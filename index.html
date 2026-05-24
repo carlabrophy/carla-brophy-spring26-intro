@@ -27,13 +27,14 @@
         alt="Carla Brophy's photo"
       />
       <h1>Carla Brophy</h1>
-      <nav>
+      <nav id="nav">
         <ul>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Experience">Experience</a></li>
-          <li><a href="#Skills">Skills</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#Connect">Connect</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#connect">Connect</a></li>
+          <li><a href="#leaveMessage">Leave a Message</a></li>
         </ul>
       </nav>
     </header>
@@ -122,6 +123,29 @@
 
     <section id="projects">
       <h2>Projects</h2>
+      <ul></ul>
+    </section>
+
+    <section id="leaveMessage">
+      <h2>Leave a Message</h2>
+      <form action="" name="leave_message">
+        <label for="usersName">Name:</label>
+        <input type="text" name="userName" required="true" />
+        <br />
+
+        <label for="usersEmail">Email:</label>
+        <input type="email" name="userEmail" required="true" />
+        <br />
+
+        <label for="usersMessage">Message:</label>
+        <textarea name="userMessage" required="true"></textarea>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
       <ul></ul>
     </section>
 
