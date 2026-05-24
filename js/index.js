@@ -29,11 +29,11 @@ messageForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   // Get values from form fields
-  const userName = event.target.usersName.value;
-  const userEmail = event.target.usersEmail.value;
-  const userMessage = event.target.usersMessage.value;
+  const userName = event.target.userName.value;
+  const userEmail = event.target.userEmail.value;
+  const userMessage = event.target.userMessage.value;
 
-  console.log(usersName, usersEmail, usersMessage);
+  console.log(userName, userEmail, userMessage);
 
   //Selecting the messages section
   const messageSection = document.querySelector("#messages");
@@ -46,8 +46,8 @@ messageForm.addEventListener("submit", function (event) {
 
   //Create a variable named newMessage that makes a new list item (li) element
   newMessage.innerHTML = `
-    <a href="mailto:${usersEmail}">${usersName}</a>
-    <span> ${usersMessage} </span>
+    <a href="mailto:${userEmail}">${userName}</a>
+    <span> ${userMessage} </span>
   `;
 
   // Create remove button
