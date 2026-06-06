@@ -21,3 +21,21 @@ for (let x of skills) {
   skill.textContent = x;
   skillsList.appendChild(skill);
 }
+
+fetch("https://api.github.com/users/carlabrophy/repos")
+  .then((response) => response.json())
+  .then((repositories) => {
+    console.log(repositories);
+
+    const projectSection = document.querySelector("#projects");
+    const projectList = projectSection.querySelector("ul");
+
+    for (let repo of repositories) {
+      const li = document.createElement("li");
+      li.textContent = repo.name;
+      projectList.appendChild(li);
+    }
+  })
+  .catch((error) => {
+    console.error("Error fetching repositories:", error);
+  });
