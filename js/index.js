@@ -30,12 +30,16 @@ fetch("https://api.github.com/users/carlabrophy/repos")
     const projectSection = document.querySelector("#projects");
     const projectList = projectSection.querySelector("ul");
 
-    for (let repo of repositories) {
-      const li = document.createElement("li");
-      li.textContent = repo.name;
-      projectList.appendChild(li);
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.textContent = repositories[i].name;
+      projectList.appendChild(project);
     }
   })
   .catch((error) => {
     console.error("Error fetching repositories:", error);
+
+    const projectSection = document.querySelector("#projects");
+    projectSection.innerHTML =
+      "<p>Sorry, projects could not be loaded right now.</p>";
   });
