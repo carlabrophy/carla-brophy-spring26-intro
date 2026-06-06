@@ -96,6 +96,19 @@ body {
   width: 150px;
 }
 
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#projects li {
+  flex: 1 1 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 header {
   display: flex;
   justify-content: space-evenly;
