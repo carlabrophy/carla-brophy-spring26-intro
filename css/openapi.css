@@ -1,0 +1,35 @@
+#getImage,
+#getBreed {
+  align-self: center;
+  background-color: #6d7c81;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 30%;
+}
+
+#getImage:hover {
+  background-color: #909a9d;
+}
+
+#catHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+#catHolder img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#breedHolder {
+  border-radius: 10px;
+  padding: 25px;
+}
+
+h2 {
+  text-decoration: underline;
+}
