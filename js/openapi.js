@@ -1,61 +1,89 @@
+//FOOTER
+const footer = document.createElement("footer");
+//Inserting the footer before the script tag
+document.body.insertBefore(footer, document.body.lastElementChild);
+
+//Append the copyright text directly to your variable
+const today = new Date();
+const thisYear = today.getFullYear();
+const copyright = document.createElement("p");
+copyright.innerHTML = `\u00A9 Carla Brophy ${thisYear}`;
+footer.appendChild(copyright);
+
+//***
+//OPEN API JS */
 const catImageBtn = document.querySelector("#getImage");
 const breedBtn = document.querySelector("#getBreed");
 
+const catHolder = document.querySelector("#catHolder");
+const breedHolder = document.querySelector("#breedHolder");
+
+const catLoading = document.querySelector("#catLoading");
+const breedLoading = document.querySelector("#breedLoading");
+
+
+//Cat Image API Fetch
 const getCatImage = async () => {
   try {
     const response = await axios.get(
       "https://api.thecatapi.com/v1/images/search",
     );
-
     return response.data[0].url;
   } catch (error) {
-    console.error(error);
-
-    document.querySelector("#catHolder").innerHTML =
-      "<p>Sorry, we couldn't load a cat image. Please try again.</p>";
-
+    catHolder.innerHTML = "<p>Sorry, we couldn't load a cat image.</p>";
     return null;
   }
 };
 
+
+//Cat Breed API Fetch
 const getCatBreed = async () => {
   try {
     const response = await axios.get("https://api.thecatapi.com/v1/breeds");
 
     const breeds = response.data;
-
     return breeds[Math.floor(Math.random() * breeds.length)];
   } catch (error) {
-    console.error(error);
-
-    document.querySelector("#breedHolder").innerHTML =
-      "<p>Sorry, we couldn't load breed information. Please try again.</p>";
-
+    breedHolder.innerHTML = "<p>Sorry, we couldn't load breed information.</p>";
     return null;
   }
 };
 
+
+//Cat Image Button Events
 catImageBtn.addEventListener("click", async () => {
+  catLoading.textContent = "Loading cat image...";
+
   const catPic = await getCatImage();
+
+  catLoading.textContent = "";
 
   if (!catPic) return;
 
-  const catDiv = document.querySelector("#catHolder");
+  breedHolder.innerHTML = "";
 
-  catDiv.innerHTML = `
-    <img src="${catPic}" alt="Random Cat">
+  catHolder.innerHTML = `
+    <img src="${catPic}" alt="Random cat" />
   `;
+  breedHolder.style.backgroundColor = "";
 });
 
+
+
+//Cat Breed Button Events
 breedBtn.addEventListener("click", async () => {
+  breedLoading.textContent = "Loading breed info...";
+
   const breed = await getCatBreed();
+
+  breedLoading.textContent = "";
 
   if (!breed) return;
 
-  const breedDiv = document.querySelector("#breedHolder");
+  catHolder.innerHTML = "";
 
-  breedDiv.style.backgroundColor = "#909a9d83";
-  breedDiv.innerHTML = `
+  breedHolder.style.backgroundColor = "#909a9d8d";
+  breedHolder.innerHTML = `
     <h3>${breed.name}</h3>
     <p><strong>Origin:</strong> ${breed.origin}</p>
     <p><strong>Temperament:</strong> ${breed.temperament}</p>
