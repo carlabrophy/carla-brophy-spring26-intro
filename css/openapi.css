@@ -1,0 +1,60 @@
+#getImage,
+#getBreed {
+  display: block;
+  margin: 15px auto;
+  background-color: #6d7c81;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 30%;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#getImage:hover,
+#getBreed:hover {
+  background-color: #909a9d;
+}
+
+main#openApi {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+#catHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  min-height: 420px;
+}
+
+#catHolder img {
+  width: 600px;
+  height: 600px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+#breedHolder {
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#catLoading,
+#breedLoading {
+  font-style: italic;
+  color: #555;
+  margin: 10px 0;
+}
+
+h2 {
+  text-decoration: underline;
+  margin-top: 30px;
+}
