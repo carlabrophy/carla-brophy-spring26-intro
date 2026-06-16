@@ -21,7 +21,6 @@ const breedHolder = document.querySelector("#breedHolder");
 const catLoading = document.querySelector("#catLoading");
 const breedLoading = document.querySelector("#breedLoading");
 
-
 //Cat Image API Fetch
 const getCatImage = async () => {
   try {
@@ -35,7 +34,6 @@ const getCatImage = async () => {
   }
 };
 
-
 //Cat Breed API Fetch
 const getCatBreed = async () => {
   try {
@@ -48,7 +46,6 @@ const getCatBreed = async () => {
     return null;
   }
 };
-
 
 //Cat Image Button Events
 catImageBtn.addEventListener("click", async () => {
@@ -67,8 +64,6 @@ catImageBtn.addEventListener("click", async () => {
   `;
   breedHolder.style.backgroundColor = "";
 });
-
-
 
 //Cat Breed Button Events
 breedBtn.addEventListener("click", async () => {
